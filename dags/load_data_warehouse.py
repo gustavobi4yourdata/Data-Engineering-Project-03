@@ -13,7 +13,7 @@ from astro.sql.table import Table, Metadata
 
 
 # connections & variables
-POSTGRES_CONN_ID = "Lab5DW"
+POSTGRES_CONN_ID = "DWDB"
 
 
 # default args and init dag
@@ -46,7 +46,7 @@ def load_files_warehouse():
     load_dim_cliente = aql.load_file(
         task_id="load_dim_cliente",
         input_file=File(path=str(CWD.parent) + "/dags/dados/DIM_CLIENTE*", filetype=FileType.CSV, conn_id=POSTGRES_CONN_ID),
-        output_table=Table(name="dim_cliente", conn_id=POSTGRES_CONN_ID, metadata=Metadata(schema="dsalabdw")),
+        output_table=Table(name="dim_cliente", conn_id=POSTGRES_CONN_ID, metadata=Metadata(schema="dw")),
         if_exists="replace",
         use_native_support=True,
         columns_names_capitalization="original"
@@ -55,7 +55,7 @@ def load_files_warehouse():
     load_dim_deposito = aql.load_file(
         task_id="load_dim_deposito",
         input_file=File(path=str(CWD.parent) + "/dags/dados/DIM_DEPOSITO*", filetype=FileType.CSV, conn_id=POSTGRES_CONN_ID),
-        output_table=Table(name="dim_deposito", conn_id=POSTGRES_CONN_ID, metadata=Metadata(schema="dsalabdw")),
+        output_table=Table(name="dim_deposito", conn_id=POSTGRES_CONN_ID, metadata=Metadata(schema="dw")),
         if_exists="replace",
         use_native_support=True,
         columns_names_capitalization="original"
@@ -64,7 +64,7 @@ def load_files_warehouse():
     load_dim_entrega = aql.load_file(
         task_id="load_dim_entrega",
         input_file=File(path=str(CWD.parent) + "/dags/dados/DIM_ENTREGA*", filetype=FileType.CSV, conn_id=POSTGRES_CONN_ID),
-        output_table=Table(name="dim_entrega", conn_id=POSTGRES_CONN_ID, metadata=Metadata(schema="dsalabdw")),
+        output_table=Table(name="dim_entrega", conn_id=POSTGRES_CONN_ID, metadata=Metadata(schema="dw")),
         if_exists="replace",
         use_native_support=True,
         columns_names_capitalization="original"
@@ -73,7 +73,7 @@ def load_files_warehouse():
     load_dim_frete = aql.load_file(
         task_id="load_dim_frete",
         input_file=File(path=str(CWD.parent) + "/dags/dados/DIM_FRETE*", filetype=FileType.CSV, conn_id=POSTGRES_CONN_ID),
-        output_table=Table(name="dim_frete", conn_id=POSTGRES_CONN_ID, metadata=Metadata(schema="dsalabdw")),
+        output_table=Table(name="dim_frete", conn_id=POSTGRES_CONN_ID, metadata=Metadata(schema="dw")),
         if_exists="replace",
         use_native_support=True,
         columns_names_capitalization="original"
@@ -82,7 +82,7 @@ def load_files_warehouse():
     load_dim_pagamento = aql.load_file(
         task_id="load_dim_pagamento",
         input_file=File(path=str(CWD.parent) + "/dags/dados/DIM_PAGAMENTO*", filetype=FileType.CSV, conn_id=POSTGRES_CONN_ID),
-        output_table=Table(name="dim_pagamento", conn_id=POSTGRES_CONN_ID, metadata=Metadata(schema="dsalabdw")),
+        output_table=Table(name="dim_pagamento", conn_id=POSTGRES_CONN_ID, metadata=Metadata(schema="dw")),
         if_exists="replace",
         use_native_support=True,
         columns_names_capitalization="original"
@@ -91,7 +91,7 @@ def load_files_warehouse():
     load_dim_transportadora = aql.load_file(
         task_id="load_dim_transportadora",
         input_file=File(path=str(CWD.parent) + "/dags/dados/DIM_TRANSPORTADORA*", filetype=FileType.CSV, conn_id=POSTGRES_CONN_ID),
-        output_table=Table(name="dim_transportadora", conn_id=POSTGRES_CONN_ID, metadata=Metadata(schema="dsalabdw")),
+        output_table=Table(name="dim_transportadora", conn_id=POSTGRES_CONN_ID, metadata=Metadata(schema="dw")),
         if_exists="replace",
         use_native_support=True,
         columns_names_capitalization="original"
@@ -100,7 +100,7 @@ def load_files_warehouse():
     load_tb_fato = aql.load_file(
         task_id="load_tb_fato",
         input_file=File(path=str(CWD.parent) + "/dags/dados/TB_FATO*", filetype=FileType.CSV, conn_id=POSTGRES_CONN_ID),
-        output_table=Table(name="tb_fato", conn_id=POSTGRES_CONN_ID, metadata=Metadata(schema="dsalabdw")),
+        output_table=Table(name="tb_fato", conn_id=POSTGRES_CONN_ID, metadata=Metadata(schema="dw")),
         if_exists="replace",
         use_native_support=True,
         columns_names_capitalization="original"
