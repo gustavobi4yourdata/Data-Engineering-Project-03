@@ -12,8 +12,6 @@ Nesse projeto usaremos o Apache Airflow para orquestrar a carga de dados no Data
 
 * **Docker**: Instruções de instalação você encontra neste [link](https://www.docker.com/products/docker-desktop/)
 
-* **Astro Python SDK**: Instruções de instalação você encontra neste [link](https://github.com/astronomer/astro-sdk). (É necessário que você tenha instalado alguma versão do python em sua máquina).  
-
 * **VSCode**: Editor de código. Instruções de instalação do VSCode você encontra neste [ link](https://code.visualstudio.com/download).
 
 * **pgAdmin4**: Client do PostgreSQL. Instruções de instalação do pgAdmin 4 você encontra [link](https://www.pgadmin.org/download/)
@@ -96,6 +94,8 @@ docker network inspect <id_rede_airflow>
 1. **Documentação Astronomer Registry**:  [Link](https://registry.astronomer.io/)
 
 2.  **Documentação astro python sdk**:  [Link](https://astro-sdk-python.readthedocs.io/en/stable/index.html#)
+
+3. **Github astro-sdk**: [Link](https://github.com/astronomer/astro-sdk)
 
 
 ## Contato
