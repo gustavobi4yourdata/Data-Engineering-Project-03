@@ -47,7 +47,7 @@ def load_files_warehouse():
         input_file=File(path=str(CWD.parent) + "/include/dados/DIM_CLIENTE*", filetype=FileType.CSV, conn_id=POSTGRES_CONN_ID),
         output_table=Table(name="dim_cliente", conn_id=POSTGRES_CONN_ID, metadata=Metadata(schema="dw")),
         if_exists="replace",
-        use_native_support=True,
+        use_native_support=False,
         columns_names_capitalization="original"
     )
 
@@ -56,7 +56,7 @@ def load_files_warehouse():
         input_file=File(path=str(CWD.parent) + "/include/dados/DIM_DEPOSITO*", filetype=FileType.CSV, conn_id=POSTGRES_CONN_ID),
         output_table=Table(name="dim_deposito", conn_id=POSTGRES_CONN_ID, metadata=Metadata(schema="dw")),
         if_exists="replace",
-        use_native_support=True,
+        use_native_support=False,
         columns_names_capitalization="original"
     )
 
@@ -65,7 +65,7 @@ def load_files_warehouse():
         input_file=File(path=str(CWD.parent) + "/include/dados/DIM_ENTREGA*", filetype=FileType.CSV, conn_id=POSTGRES_CONN_ID),
         output_table=Table(name="dim_entrega", conn_id=POSTGRES_CONN_ID, metadata=Metadata(schema="dw")),
         if_exists="replace",
-        use_native_support=True,
+        use_native_support=False,
         columns_names_capitalization="original"
     )
 
@@ -74,7 +74,7 @@ def load_files_warehouse():
         input_file=File(path=str(CWD.parent) + "/include/dados/DIM_FRETE*", filetype=FileType.CSV, conn_id=POSTGRES_CONN_ID),
         output_table=Table(name="dim_frete", conn_id=POSTGRES_CONN_ID, metadata=Metadata(schema="dw")),
         if_exists="replace",
-        use_native_support=True,
+        use_native_support=False,
         columns_names_capitalization="original"
     )
 
@@ -83,7 +83,7 @@ def load_files_warehouse():
         input_file=File(path=str(CWD.parent) + "/include/dados/DIM_PAGAMENTO*", filetype=FileType.CSV, conn_id=POSTGRES_CONN_ID),
         output_table=Table(name="dim_pagamento", conn_id=POSTGRES_CONN_ID, metadata=Metadata(schema="dw")),
         if_exists="replace",
-        use_native_support=True,
+        use_native_support=False,
         columns_names_capitalization="original"
     )
 
@@ -92,7 +92,7 @@ def load_files_warehouse():
         input_file=File(path=str(CWD.parent) + "/include/dados/DIM_TRANSPORTADORA*", filetype=FileType.CSV, conn_id=POSTGRES_CONN_ID),
         output_table=Table(name="dim_transportadora", conn_id=POSTGRES_CONN_ID, metadata=Metadata(schema="dw")),
         if_exists="replace",
-        use_native_support=True,
+        use_native_support=False,
         columns_names_capitalization="original"
     )
 
@@ -101,7 +101,7 @@ def load_files_warehouse():
         input_file=File(path=str(CWD.parent) + "/include/dados/TB_FATO*", filetype=FileType.CSV, conn_id=POSTGRES_CONN_ID),
         output_table=Table(name="tb_fato", conn_id=POSTGRES_CONN_ID, metadata=Metadata(schema="dw")),
         if_exists="replace",
-        use_native_support=True,
+        use_native_support=False,
         columns_names_capitalization="original"
     )
 
